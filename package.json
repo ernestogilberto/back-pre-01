@@ -9,8 +9,22 @@
     "dev": "nodemon src/app.js",
     "start": "node src/app.js"
   },
+    "keywords": [
+        "backend",
+        "coderhouse",
+        "express",
+        "nodejs"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ernestogilberto/back-pre-01.git"
+    },
   "author": "Ernesto Gilberto Valenzuela Gallardo",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ernestogilberto/back-pre-01/issues"
+  },
+  "homepage": "https://github.com/ernestogilberto/back-pre-01#readme",
   "devDependencies": {
     "nodemon": "^3.0.3"
   },
