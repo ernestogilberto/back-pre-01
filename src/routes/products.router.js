@@ -1,11 +1,8 @@
 import express from 'express';
 import {ProductManager} from '../managers/productManager.js'
-import path from 'path';
-import {fileURLToPath} from 'url';
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const root = path.join(__dirname, '../');
+import {__dirname} from '../utils.js';
 
-const manager = new ProductManager(root + 'db/products.json');
+const manager = new ProductManager(__dirname + '/db/products.json');
 
 const router = express.Router();
 
@@ -16,7 +13,7 @@ router.get('/', async (req, res) => {
         if (error) {
             res.status(400).send(error);
         }
-        res.status(200).send(limit ? products.slice(0, limit) : products);
+        res.status(200).send({products: limit ? products.slice(0, limit) : products});
     } catch (error) {
         console.error(error);
         res.status(500).send('Internal server error');

@@ -1,11 +1,8 @@
 import express from 'express';
 import {CartManager} from '../managers/cartManager.js'
-import path from 'path';
-import {fileURLToPath} from 'url';
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const root = path.join(__dirname, '../');
+import {__dirname} from '../utils.js';
 
-const manager = new CartManager(root + 'db/carts.json');
+const manager = new CartManager(__dirname + '/db/carts.json');
 
 const router = express.Router();
 

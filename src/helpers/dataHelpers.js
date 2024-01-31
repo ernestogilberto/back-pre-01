@@ -10,6 +10,14 @@ const setId = (data) => {
     }
 }
 
+const formatProduct = (product) => {
+    product.status = product.status === 'true';
+    const {price, stock} = product;
+    product.price = parseFloat(price);
+    product.stock = parseInt(stock);
+    return product;
+}
+
 // Function to validate a product
 const validateProduct = (product, requiredProductFields, currentProducts) => {
 
@@ -21,6 +29,8 @@ const validateProduct = (product, requiredProductFields, currentProducts) => {
     if(product.id) {
         return {error: 'Id cannot be created'}
     }
+
+    product = formatProduct(product)
 
     // Check if all required fields of the product exist, if not, return error
     for (const field of requiredProductFields) {

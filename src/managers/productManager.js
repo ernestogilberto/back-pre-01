@@ -40,7 +40,8 @@ class ProductManager {
             }
 
             // Setting the product's ID using the setId helper function
-            product.id = await setId(products)
+            const id = await setId(products)
+            product = {id, ...product}
 
             // If don't get the products, returning an error
             if (!products) {

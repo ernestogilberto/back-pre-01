@@ -9,16 +9,18 @@
     "dev": "nodemon src/app.js",
     "start": "node src/app.js"
   },
-    "keywords": [
-        "backend",
-        "coderhouse",
-        "express",
-        "nodejs"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/ernestogilberto/back-pre-01.git"
-    },
+  "keywords": [
+    "backend",
+    "coderhouse",
+    "express",
+    "nodejs",
+    "socket.io",
+    "Handlebars"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ernestogilberto/back-pre-01.git"
+  },
   "author": "Ernesto Gilberto Valenzuela Gallardo",
   "license": "ISC",
   "bugs": {
@@ -29,6 +31,8 @@
     "nodemon": "^3.0.3"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "socket.io": "^4.7.4"
   }
 }

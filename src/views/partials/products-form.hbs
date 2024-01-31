@@ -1,0 +1,31 @@
+<div class="form-container">
+    <h1>Enter Product</h1>
+    <form action="/realTimeProducts" method="POST">
+        <label for="title">Title: </label>
+        <input id="title" name="title">
+        <label for="description">Description: </label>
+        <input id="description" name="description">
+        <label for="code">Code: </label>
+        <input id="code" name="code">
+        <label for="price">Price: </label>
+        <input id="price" name="price">
+        <fieldset>
+            <legend>Status:</legend>
+            <div>
+                <input type="radio" id="active" name="status" checked value="true">
+                <label for="active">Active</label>
+            </div>
+            <div>
+                <input type="radio" id="inactive" name="status" value="false">
+                <label for="inactive">Inactive</label>
+            </div>
+        </fieldset>
+        <label for="stock">Stock: </label>
+        <input id="stock" name="stock">
+        <label for="category">Category: </label>
+        <input id="category" name="category">
+        <label for="thumbnail">Thumbnail: </label>
+        <input id="thumbnail" name="thumbnail">
+        <input type="submit" class="btn btn-submit">
+    </form>
+</div>
